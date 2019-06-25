@@ -6,21 +6,28 @@ let ul = document.getElementById("tasks")
 
 document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", createTask)
-});
 
+});
 
 
 function createTask(event) {
   event.preventDefault();
 
-  console.log(event);
-
   let li = document.createElement("li");
-  li.innerText = input.value;
+    li.innerText = input.value;
+  let button = document.createElement("button");
+    button.innerText = "x";
+    button.addEventListener("click", delete_task);
+    // event and function arguments
 
+  li.appendChild(button)
   ul.appendChild(li)
 
-  console.log(ul)
+}
 
-  console.log(li)
+function delete_task(event) {
+  // console.log(event.target);
+  let listItem = event.target.parentElement;
+  // console.log(listItem)
+  listItem.remove();
 }
