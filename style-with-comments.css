@@ -37,28 +37,41 @@ button {
   width: 80%;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* New Stuff Below */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* This is <ul id="tasks"> in index.html */
 #tasks {
   list-style: none;
   padding: 0;
 }
 
+/* The space between #tasks and li means any <li> inside <ul id="tasks"> */
 #tasks li {
   width: 100%;
   display: block;
   padding: 4px 6px 5px;
   border-top: 1px solid lightgray;
 }
+
+/* This is the first <li> in the list */
 #tasks li:first-child {
   border-top: none;
 }
 
+/* This means <li> with class high, medium, or low inside <ul id="tasks">
+The selectors are one level more specific than the #tasks li above 
+in order to overwrite those styles. The commas mean that we are targetting
+multiple selectors at the same time. */
 #tasks li.high, 
 #tasks li.medium, 
-#tasks li.low { 
-  border: none; 
+#tasks li.low {
+  border: none;
   padding: 0;
 }
 
+/* This is a button inside an <li> inside <ul id="tasks"> */
 #tasks li button {
   padding: 0.8em;
   font-size: 0.5em;
@@ -68,6 +81,7 @@ button {
   cursor: pointer;
 }
 
+/* This is a <span> inside an <li> inside <ul id="tasks"> */
 #tasks li span {
   float: right;
   margin-right: 10px;
@@ -80,6 +94,7 @@ button {
   box-shadow: inset 0px -1px 3px #d1d1d1;
 }
 
+/* These target the data tags referenced on line 38 of index-with-comments.js */
 li[data-priority="low"] {
   background: lightgreen;
 }
