@@ -41,3 +41,16 @@ button {
   border-radius: 2px;
   padding: 0px 4px;
 }
+
+li[data-priority="low"] {
+  color: green;
+}
+
+li[data-priority="low"] {
+  color: yellow;
+}
+
+li[data-priority="low"] {
+  color: red;
+}
+
