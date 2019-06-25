@@ -1,14 +1,12 @@
 let form = document.getElementById("create-task-form")
 let input = document.getElementById("new-task-description")
 let ul = document.getElementById("tasks")
+// waiting for Submit input, then running createTasks
 
 
 document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", createTask)
-
 });
-
-  // waiting for Submit input, then running createTasks
 
 
 
